@@ -1,7 +1,7 @@
 # fusioncatcher
 
 ## Purpose: 
-Process 266 TCGA samples through a fusion-gene detection pipeline fusioncatcher
+Process 265 TCGA samples through a fusion-gene detection pipeline fusioncatcher
 
 ## Project:
 Sarcoma
