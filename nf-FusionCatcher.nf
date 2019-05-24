@@ -32,16 +32,18 @@ Channel
 
 */
 
+chunk = params.chunk
+
 process collectFilesToDownload {
 	
 	publishDir "s3://bioinformatics-analysis/FusionCatcher/", mode: 'copy', overwrite: true
 
 	output:
-	file("tcga.txt") into filesList
+	file("${chunk}.txt") into filesList
 
 	script:
 	"""
-	/root/anaconda2/bin/aws s3 cp s3://bioinformatics-analysis/tcga.txt ./tcga.txt
+	/root/anaconda2/bin/aws s3 cp s3://bioinformatics-analysis/${chunk}.txt ./${chunk}.txt
 	"""
 
 }
