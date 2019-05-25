@@ -19,6 +19,18 @@ executor >  awsbatch (3)
 [b2/8d50e0] process > dowloadAndProcessFastqFiles      [ 50%] 1 of 2
 ```
 
+Successful run on tiny fastq files.
+```
+[warm up] executor > awsbatch
+executor >  awsbatch (2)
+[ee/360a78] process > collectFilesToDownload [100%] 1 of 1 ✔
+[1f/904f28] process > dowloadAndProcessFastqFiles      [100%] 1 of 1 ✔
+Completed at: 25-May-2019 00:09:19
+Duration    : 21m 40s
+CPU hours   : (a few seconds)
+Succeeded   : 2
+```
+
 ##  Input files:
 
 ### Location
