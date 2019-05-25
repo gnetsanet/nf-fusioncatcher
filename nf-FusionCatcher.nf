@@ -62,14 +62,14 @@ process dowloadFastqFiles {
 	"""
 	/root/anaconda2/bin/aws s3 cp s3://bioinformatics-analysis/TCGA/${tarFile} ./${tarFile}
 
-	mkdir -p ./{sampleId}/Input
+	mkdir -p ./${sampleId}/Input
 
-	mkdir -p ./{sampleId}/Output
+	mkdir -p ./${sampleId}/Output
 
-	tar -xzvf ${tarFile} --directory ./{sampleId}/Input
+	tar -xzvf ${tarFile} --directory ./${sampleId}/Input
 
-	/root/anaconda2/envs/fusioncatcher/bin/fusioncatcher -i ./{sampleId}/Input -o ./{sampleId}/Output --data /efs/references/human_v90/
+	/root/anaconda2/envs/fusioncatcher/bin/fusioncatcher -i ./${sampleId}/Input -o ./${sampleId}/Output --data /efs/references/human_v90/
 
-    /root/anaconda2/bin/aws s3 cp ./{sampleId}/Output s3://bioinformatics-analysis/FusionCatcher/{sampleId} --recursive
+    /root/anaconda2/bin/aws s3 cp ./${sampleId}/Output s3://bioinformatics-analysis/FusionCatcher/${sampleId} --recursive
 	"""
 }
